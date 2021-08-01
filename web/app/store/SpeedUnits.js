@@ -35,8 +35,8 @@ Ext.define('Traccar.store.SpeedUnits', {
 
     convertValue: function (value, unit, back) {
         var model;
-        if (!unit) {
-            unit = 'kn';
+        if (!unit) {            
+            unit = 'kmh';
         }
         model = this.findRecord('key', unit);
         return back ? value / model.get('factor') : value * model.get('factor');
@@ -44,8 +44,8 @@ Ext.define('Traccar.store.SpeedUnits', {
 
     formatValue: function (value, unit, convert) {
         var model;
-        if (!unit) {
-            unit = 'kn';
+        if (!unit) {            
+            unit = 'kmh';
         }
         model = this.findRecord('key', unit);
         return (convert ? this.convertValue(value, unit) : value).toFixed(1) + ' ' + model.get('name');
