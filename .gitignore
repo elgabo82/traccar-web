@@ -10,4 +10,5 @@ node_modules
 package-lock.json
 
 .*.swp
+.*.tar.gz
 *~
