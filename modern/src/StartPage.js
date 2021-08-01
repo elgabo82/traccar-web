@@ -49,8 +49,11 @@ const StartPage = ({ children }) => {
       <div className={classes.sidebar}>
         {!useMediaQuery(theme.breakpoints.down('md'))
           && (
-          <svg height="64" width="240">
+          /*<svg height="64" width="240">
             <use xlinkHref="/logo.svg#img" />
+          </svg>*/
+          <svg height="82" width="82">
+            <use xlinkHref="/Logo_FMO_Imagen_Texto_Celeste_82x82.svg#img" />
           </svg>
           )}
       </div>
